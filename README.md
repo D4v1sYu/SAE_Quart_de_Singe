@@ -1,4 +1,4 @@
-# SAE_S1-02
+# SAE_Quart_de_Singe
 
 Règles du jeu :
 

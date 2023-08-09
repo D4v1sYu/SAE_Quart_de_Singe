@@ -9,7 +9,7 @@ Si le joueur précédent ne peut pas fournir un mot existant qui convient aux le
 
 En pratique :
 
-L'idéal est de pouvoir lancer une partie même si l'on a personne avec qui jouer.
+L'idéal est de pouvoir lancer une partie même si l'on a personne avec qui jouer.  
 C'est pourquoi j'ai implémenté un cpu capable de jouer au jeu. Ainsi les joueurs peuvent etre soit un humain soit un robot.
 Il faut également paramétrer l'intelligence de ces robots pour qu'ils soient compétitifs et ne répondent pas avec des lettres aléatoires.
 Pour ce projet, les consignes sont de rendre les robots les plus intelligents possible.

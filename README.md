@@ -9,10 +9,20 @@ Si le joueur précédent ne peut pas fournir un mot existant qui convient aux le
 
 En pratique :
 
-L'idéal est de pouvoir lancer une partie même si l'on a personne avec qui jouer.  
+L'idéal est de pouvoir lancer une partie même si l'on a personne avec qui jouer.
 C'est pourquoi j'ai implémenté un cpu capable de jouer au jeu. Ainsi les joueurs peuvent etre soit un humain soit un robot.
 Il faut également paramétrer l'intelligence de ces robots pour qu'ils soient compétitifs et ne répondent pas avec des lettres aléatoires.
-Pour ce projet, les consignes sont de rendre les robots les plus intelligents possible.
+Pour ce projet, les consignes étaient de rendre les robots les plus intelligents possible.
 
 Comment rendre les robots plus intelligent ?
+
+Avec les outils à ma disposition et mon niveau en programmation, il était impossible pour moi de développer une IA (apprentissage par renforcement).
+J'ai donc fait en sorte qu'un robot puisse toujours gagner contre un humain en partie 1v1.
+Cependant dans des parties avec seulement des robots, on se retrouve à voir un pattern de mêmes mots qui se répète selon le nombre de joueurs.
+
+Comment jouent-ils ?
+
+Pour commencer, les robots ont accès au dictionnaire contenant une liste de mots existants.
+
+Conclusion :
 

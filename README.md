@@ -2,10 +2,33 @@
 
 Règles du jeu :
 
-Les joueurs se relaient pour ajouter une lettre à un mot existant.
+Les joueurs se relaient pour ajouter une lettre à un mot.
 Si un joueur ajoute une lettre qui termine un mot existant de plus de deux lettres, il perd la manche et reçoit un quart de singe.
-Le joueur actuel peut demander au joueur précédent à quel mot il pense s'il préfère.  
-Si le joueur précédent ne peut pas fournir un mot existant qui convient aux lettres déjà annoncées, il perd la manche. Sinon, le joueur qui a posé la question perd la manche. Le premier joueur à collecter quatre quarts de singe perd le jeu.
+Le joueur actuel peut demander au joueur précédent à quel mot il pense.  
+Si le joueur précédent ne peut pas fournir un mot existant qui convient aux lettres déjà annoncées, il perd la manche. Sinon, le joueur qui a posé la question perd la manche. 
+Le premier joueur à collecter quatre quarts de singe perd le jeu.
+
+Exemple :
+
+*J1 : A*  
+Mot : "A"  
+*J2 : A*  
+Mot : "AA"  
+*J1 : S*  
+Le mot "AAS" existe, J1 prend un quart de singe  
+J1 : 0.25, J2 : 0
+
+*J1 : S*  
+Mot : "S"  
+*J2 : Q*  
+Mot : "SQ"  
+*J1 : U*  
+Mot : "SQU"  
+*J2 : ?*  
+J1 doit saisir le mot auquel il pense  
+*J1 : SQUAT*  
+Le mot "SQUAT" existe, J2 prend un quart de singe  
+J1 : 0.25, J2 : 0.25
 
 En pratique :
 
@@ -22,7 +45,7 @@ Cependant dans des parties avec seulement des robots, on se retrouve à voir un 
 
 Comment jouent-ils ?
 
-Pour commencer, les robots ont accès au dictionnaire contenant une liste de mots existants.
+Pour commencer, les robots ont accès au dictionnaire contenant une liste de mots.
 
 Conclusion :
 

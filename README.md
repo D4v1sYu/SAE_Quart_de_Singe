@@ -48,10 +48,14 @@ Comment rendre les robots plus intelligent ?
 
 Avec les outils à ma disposition et mon niveau en programmation, il était impossible pour moi de développer une IA (apprentissage par renforcement).
 J'ai donc fait en sorte qu'un robot puisse toujours gagner contre un humain en partie 1v1.
-Pour cela, il s'adapte pour toujours trouver un mot valable du dictionnaire pouvant compléter le mot en jeu, tout en évitant de perdre, ainsi la lettre qui va etre jouer doit :
-- ne pas compléter un mot du dictionnaire
-- 
+Pour cela, il s'adapte pour toujours trouver un mot valable du dictionnaire pouvant compléter le mot en jeu, tout en évitant de perdre :
+- la lettre qui va etre jouer ne doit pas compléter un mot du dictionnaire
+- le mot ne doit pouvoir etre jouer contre soi au prochain tour
+- si aucun mot valable n'est trouvé alors le robot joue "?"
 Cependant dans des parties avec seulement des robots, on se retrouve à voir un pattern de mêmes mots qui se répète selon le nombre de joueurs.
 
 Conclusion :
 
+C'est mon premier projet en langage C++ qui n'est évidemment pas complet car j'ai seulement utilisé quelques outils du langage, à la demande des enseignants.
+Mais je pense avoir pu acquérir beaucoup plus d'expérience individuelle et progresser notamment en développement et documentation.
+Il faut maintenant que je continue d'apprendre d'avantage sur ce langage et ses fonctionnalités que je n'ai pas pu utilisé.

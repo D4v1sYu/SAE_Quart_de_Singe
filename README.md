@@ -1,12 +1,15 @@
 # SAE_Quart_de_Singe
 
+Projet réalisé lors de ma première année de BUT Informatique
+
 Règles du jeu :
 -
-Les joueurs se relaient pour ajouter une lettre à un mot.
-Si un joueur ajoute une lettre qui termine un mot existant de plus de deux lettres, il perd la manche et reçoit un quart de singe.
-Le joueur actuel peut demander au joueur précédent à quel mot il pense.  
-Si le joueur précédent ne peut pas fournir un mot existant qui convient aux lettres déjà annoncées, il perd la manche. Sinon, le joueur qui a posé la question perd la manche. 
-Le premier joueur à collecter quatre quarts de singe perd le jeu.
+Les joueurs se relaient pour ajouter une lettre à un mot en construction.  
+Si un joueur ajoute une lettre qui forme un mot existant de plus de deux lettres, il perd la manche et reçoit un quart de singe.  
+À tout moment, le joueur actif peut demander au joueur précédent à quel mot il pense.  
+Si ce dernier est incapable de donner un mot valide correspondant aux lettres déjà posées, il perd la manche. Sinon, c’est le joueur qui a posé la question qui perd.  
+
+Le premier joueur à accumuler **quatre quarts de singe** (donc un singe entier) perd la partie.
 
 Exemple :
 -
@@ -32,32 +35,32 @@ J1 : 0.25, J2 : 0.25
 
 En pratique :
 -
-L'idéal est de pouvoir lancer une partie même si l'on a personne avec qui jouer.
-C'est pourquoi j'ai implémenté un cpu capable de jouer au jeu. Ainsi les joueurs peuvent etre soit un humain soit un robot.
-Il faut également paramétrer l'intelligence de ces robots pour qu'ils soient compétitifs et ne répondent pas avec des lettres aléatoires.
-Pour ce projet, les consignes étaient de rendre les robots les plus intelligents possible.
+L’idéal est de pouvoir lancer une partie même sans autre joueur humain.  
+C’est pourquoi j’ai implémenté un **CPU capable de jouer au jeu**. Chaque joueur peut donc être un humain ou un robot.  
+
+L’intelligence des robots est paramétrée pour qu’ils ne jouent pas de lettres aléatoires mais respectent les règles du jeu de manière compétitive.
+L’objectif du projet était de rendre ces robots **aussi intelligents que possible**.
 
 Comment jouent-ils ?
 -
-Pour commencer, les robots ne peuvent que jouer des caractères valables (alphabet et "?").
-On les paramètre ensuite pour qu'ils puissent jouer selon les règles du jeu.
-Ils ont aussi accès au dictionnaire contenant une liste de mots standardisée (tout en majuscule et sans accent).
-Grace à cela, les robots choississent un mot du dictionnaire pouvant compléter le mot en jeu, même si ils perdent, ils jouent les caractères.
+Les robots ne peuvent jouer que des caractères valides (lettres de l’alphabet ou "?").  
+Ils suivent les règles du jeu, en utilisant un dictionnaire standardisé (mots en majuscules, sans accents) pour choisir des mots qui complètent la chaîne en cours.  
+Même s’ils finissent par perdre, ils choisissent toujours une lettre qui peut théoriquement mener à un mot du dictionnaire.
 
-Comment rendre les robots plus intelligent ?
+Comment les rendre plus intelligents ?
 -
+Avec les outils à ma disposition et mon niveau en programmation, il m’était impossible de développer une vraie IA (type apprentissage par renforcement).
 
-Avec les outils à ma disposition et mon niveau en programmation, il était impossible pour moi de développer une IA (apprentissage par renforcement).
-J'ai donc fait en sorte qu'un robot puisse toujours gagner contre un humain en partie 1v1.
-Pour cela, il s'adapte pour toujours trouver un mot valable du dictionnaire pouvant compléter le mot en jeu, tout en évitant de perdre :
-- la lettre qui va etre jouer ne doit pas compléter un mot du dictionnaire
-- le mot ne doit pouvoir etre jouer contre soi au prochain tour
-- si aucun mot valable n'est trouvé alors le robot joue "?"
+Cependant, j’ai conçu un système pour que le **robot gagne toujours contre un humain** en duel 1v1, en suivant ces règles :
+- ne jamais compléter un mot existant (éviter de perdre immédiatement)
+- ne pas poser une lettre qui permettrait à l’adversaire de compléter un mot au tour suivant
+- Si aucune solution valable n’existe, le robot joue "?" pour provoquer une demande de mot
 
-Cependant dans des parties avec seulement des robots, on se retrouve à voir un pattern de mêmes mots qui se répète selon le nombre de joueurs.
+⚠️ Lors des parties uniquement composées de robots, on observe cependant une répétition des mêmes mots, selon le nombre de joueurs.
 
 Conclusion :
 -
-C'est mon premier projet en langage C++ qui n'est évidemment pas complet car j'ai seulement utilisé quelques outils du langage, à la demande des enseignants.
-Mais je pense avoir pu acquérir beaucoup plus d'expérience individuelle et progresser notamment en développement et documentation.
-Il faut maintenant que je continue d'apprendre d'avantage sur ce langage et ses fonctionnalités que je n'ai pas pu utilisé.
+Il s’agit de mon tout premier projet en C++, réalisé lors de ma première année de BUT Informatique.  
+Il n’est évidemment pas exhaustif : j’ai uniquement utilisé un sous-ensemble des fonctionnalités du langage, conformément aux attentes pédagogiques.  
+Mais je pense avoir pu acquérir beaucoup plus d'expérience individuelle et progresser notamment en développement et documentation.  
+Il faut que je continue d'apprendre d'avantage sur ce langage et ses fonctionnalités que je n'ai pas pu utilisé.
